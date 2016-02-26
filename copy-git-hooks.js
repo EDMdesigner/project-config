@@ -8,9 +8,3 @@ try {
 } catch (err) {
 	console.error("Error: " + err.message);
 }
-
-try {
-	fs.copySync(__dirname + "/dotfiles", process.cwd() + "/");
-} catch (err) {
-	console.error("Error: " + err.message);
-}
