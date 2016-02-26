@@ -2,7 +2,9 @@
   "name": "project-config-setup",
   "version": "0.0.1",
   "bin": {
-    "copy-config": "copy-config.js"
+    "copy-git-hooks": "copy-git-hooks.js",
+    "copy-dotfiles": "copy-dotfiles.js",
+    "copy-gulpfile": "copy-gulpfile.js"
   },
   "description": "",
   "main": "test.js",
