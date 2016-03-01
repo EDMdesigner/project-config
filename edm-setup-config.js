@@ -27,12 +27,12 @@ var gulp = cmd.gulp;
 program
 	.version("0.0.1")
 	.option("-d, --dotfiles", "Copy dotfiles project root")
-	.option("-h, --hooks", "Copy git hooks")
-	.option("-g, --gulp", "Copy Gulpfile.js")
+	.option("-g, --hooks", "Copy git hooks")
+	.option("-t, --task", "Copy task runner file")
 	.parse(process.argv);
 
 process.chdir("./");
 
 if (program.dotfiles)dotfile();
 if (program.hooks)gitHooks();
-if (program.gulp)gulpfile();
+if (program.task)gulpfile();

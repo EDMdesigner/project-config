@@ -7,6 +7,17 @@ npm install -g edm-setup-config
 ```
 ## Run
 
+### Copy dotfiles
 ```bash
-edm-setup-config --help
+edm-setup-config -d
+```
+
+### Copy Git Hooks
+```bash
+edm-setup-config -g
+```
+
+### Copy gulpfile
+```bash
+edm-setup-config -t
 ```
