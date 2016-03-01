@@ -1,12 +1,12 @@
-# project-config
+# edm-setup-config
 
 ## Install
 
 ```bash
-npm install -g project-config-setup
+npm install -g edm-setup-config
 ```
-
 ## Run
+
 ```bash
-copy-config
+edm-setup-config --help
 ```
