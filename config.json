@@ -1,7 +1,7 @@
 {
   "commands": {
-    "dotfiles": "/scripts/copy-dotfiles.js",
-    "hooks": "/scripts/copy-git-hooks.js",
-    "gulp": "/scripts/copy-gulpfile.js"
+    "dotfiles": "scripts/copy-dotfiles.js",
+    "hooks": "scripts/copy-git-hooks.js",
+    "gulp": "scripts/copy-gulpfile.js"
   }
 }

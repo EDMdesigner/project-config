@@ -1,11 +1,13 @@
-#!/usr/bin/env node
-
 var fs = require("fs-extra");
 
-process.chdir("./");
+module.exports = function dotfilesCopy(){
 
-try {
-	fs.copySync(__dirname + "/dotfiles", process.cwd() + "/");
-} catch (err) {
-	console.error("Error: " + err.message);
+	process.chdir("./");
+	process.cwd();
+
+	try {
+		fs.copySync(__dirname + "/dotfiles", process.env.PWD + "/");
+	} catch (err) {
+		console.error("Error: " + err.message);
+	}
 }
