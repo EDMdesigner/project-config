@@ -1,6 +1,6 @@
 {
   "name": "edm-setup-config",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "bin": {
     "edm-setup-config": "edm-setup-config.js"
   },
@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/EDMdesigner/project-config#readme",
   "dependencies": {
-    "commander": "^2.9.0",
-    "nconf": "^0.8.4",
-    "fs-extra": "^0.26.5"
+    "commander": "2.9.0",
+    "nconf": "0.8.4",
+    "fs-extra": "0.26.5"
   }
 }

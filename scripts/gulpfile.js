@@ -11,11 +11,9 @@ var jsFiles = [
 ];
 
 var jsonFiles = [
-	"src/featureConfigDefaults/**/*.json",
-	"package.json",
 	".jshintrc",
 	".jscsrc",
-	"src/modules/**/*.json"
+	"./**/*.json"
 ];
 
 // JSON lint
@@ -32,7 +30,8 @@ gulp.task("jsonlint", function() {
 gulp.task("jshint", function() {
 	return gulp.src(jsFiles)
 		.pipe(jshint(".jshintrc"))
-		.pipe(jshint.reporter("jshint-stylish"));
+		.pipe(jshint.reporter("jshint-stylish"))
+		.pipe(jshint.reporter('fail'));
 });
 
 
@@ -44,8 +43,8 @@ gulp.task("jscs", function() {
 			configPath: ".jscsrc",
 			fix: true
 		}))
-		.pipe(gulp.dest("./"))
-		.pipe(stylish());
+		.pipe(stylish())
+		.pipe(jscs.reporter('fail'));
 });
 
 gulp.task("test", ["jsonlint", "jshint", "jscs"]);
