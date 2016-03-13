@@ -7,7 +7,8 @@ var fs			= require("fs"),
 	dotfile 	= require("./scripts/copy-dotfiles"),
 	gitHooks 	= require("./scripts/copy-git-hooks"),
 	gulpfile 	= require("./scripts/copy-gulpfile"),
-	program 	= require("commander");
+	program 	= require("commander"),
+	pjson = require('./package.json');
 
 process.chdir(__dirname);
 var configFile = process.cwd() + "/config.json";
@@ -25,7 +26,7 @@ var hooks = cmd.hooks;
 var gulp = cmd.gulp;
 
 program
-	.version("0.0.1")
+	.version(pjson.version)
 	.option("-d, --dotfiles", "Copy dotfiles project root")
 	.option("-g, --hooks", "Copy git hooks")
 	.option("-t, --task", "Copy task runner file")

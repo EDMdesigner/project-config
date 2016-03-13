@@ -10,4 +10,7 @@ module.exports = function dotfilesCopy(){
 	} catch (err) {
 		console.error("Error: " + err.message);
 	}
+
+	console.log("\n======================================================");
+	console.log("dotfiles copied: ", process.env.PWD + "/ \n\n");
 }

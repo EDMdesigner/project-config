@@ -10,4 +10,7 @@ module.exports = function hooksCopy() {
 	} catch (err) {
 		console.error("Error: " + err.message);
 	}
+	console.log("\n==================================================================");
+	console.log("Git hooks copied: ", process.env.PWD + "/.git/hooks/\n");
+	console.log("Add 'npm test' - to package.json, scripts section\n\n");
 }
