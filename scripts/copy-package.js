@@ -13,6 +13,4 @@ module.exports = function packageCopy() {
 
 	console.log("===============================================================");
 	console.log("package.json copied: ", process.env.PWD + "/package.json");
-	//console.log("\nRun following command: ");
-	//console.log("npm install --save-dev gulp gulp-jshint gulp-jsonlint gulp-jscs gulp-jscs-stylish jshint-stylish\n");
-}
+};

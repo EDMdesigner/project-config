@@ -13,4 +13,4 @@ module.exports = function dotfilesCopy(){
 
 	console.log("\n======================================================");
 	console.log("dotfiles copied: ", process.env.PWD + "/ \n\n");
-}
+};

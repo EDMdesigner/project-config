@@ -3,14 +3,10 @@ var jscs = require("gulp-jscs");
 var jshint = require("gulp-jshint");
 var stylish = require("gulp-jscs-stylish");
 var jsonlint = require("gulp-jsonlint");
-var browserify = require("browserify");
-var partialify = require("partialify");
-var source = require("vinyl-source-stream");
 
 var jsFiles = [
 	"./**/*.js",
-	"!node_modules/**/*",
-	"!./**/*.built.js"
+	"!node_modules/**/*"
 ];
 
 var jsonFiles = [
@@ -51,31 +47,3 @@ gulp.task("jscs", function() {
 });
 
 gulp.task("test", ["jsonlint", "jshint", "jscs"]);
-
-function createBrowserifyTask(config) {
-	return function() {
-		var bundleMethod = browserify;//global.isWatching ? watchify : browserify;
-
-		var bundler = bundleMethod({
-			// Specify the entry point of your app
-			debug: true,
-			entries: config.entries,
-			standalone: "knob"
-		});
-
-		var bundle = function() {
-			return bundler
-				.transform(partialify)
-				// Enable source maps!
-				.bundle()
-				// Use vinyl-source-stream to make the
-				// stream gulp compatible. Specifiy the
-				// desired output filename here.
-				.pipe(source(config.outputFileName))
-				// Specify the output destination
-				.pipe(gulp.dest(config.destFolder));
-		};
-
-		return bundle();
-	};
-}

@@ -1,6 +1,6 @@
 {
   "name": "edm-setup-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "bin": {
     "edm-setup-config": "edm-setup-config.js"
   },
@@ -35,5 +35,14 @@
     "commander": "2.9.0",
     "nconf": "0.8.4",
     "fs-extra": "0.26.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jscs-stylish": "^1.3.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-jsonlint": "^1.1.2",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
   }
 }

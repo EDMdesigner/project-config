@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 var fs			= require("fs"),
-	path 		= require("path"),
-	exec		= require("child_process").exec,
+//	path 		= require("path"),
+//	exec		= require("child_process").exec,
 	nconf		= require("nconf"),
 	dotfile 	= require("./scripts/copy-dotfiles"),
 	gitHooks 	= require("./scripts/copy-git-hooks"),
 	gulpfile 	= require("./scripts/copy-gulpfile"),
 	pj 			= require("./scripts/copy-package"),
 	program 	= require("commander"),
-	pjson = require('./package.json');
+	pjson = require("./package.json");
 
 process.chdir(__dirname);
 var configFile = process.cwd() + "/config.json";
@@ -20,13 +20,13 @@ if (!fs.existsSync(configFile)) {
 
 nconf.file({file: configFile});
 
+/*
 var cmd = nconf.get("commands");
-
 var dotfiles = cmd.dotfiles;
 var hooks = cmd.hooks;
 var gulp = cmd.gulp;
 var package = cmd.package;
-
+*/
 program
 	.version(pjson.version)
 	.option("-d, --dotfiles", "Copy dotfiles project root")

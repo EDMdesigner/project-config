@@ -13,4 +13,4 @@ module.exports = function hooksCopy() {
 	console.log("\n==================================================================");
 	console.log("Git hooks copied: ", process.env.PWD + "/.git/hooks/\n");
 	console.log("Add 'npm test' - to package.json, scripts section\n\n");
-}
+};
