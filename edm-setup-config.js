@@ -7,6 +7,7 @@ var fs			= require("fs"),
 	dotfile 	= require("./scripts/copy-dotfiles"),
 	gitHooks 	= require("./scripts/copy-git-hooks"),
 	gulpfile 	= require("./scripts/copy-gulpfile"),
+	pj 			= require("./scripts/copy-package"),
 	program 	= require("commander"),
 	pjson = require('./package.json');
 
@@ -24,12 +25,14 @@ var cmd = nconf.get("commands");
 var dotfiles = cmd.dotfiles;
 var hooks = cmd.hooks;
 var gulp = cmd.gulp;
+var package = cmd.package;
 
 program
 	.version(pjson.version)
 	.option("-d, --dotfiles", "Copy dotfiles project root")
 	.option("-g, --hooks", "Copy git hooks")
 	.option("-t, --task", "Copy task runner file")
+	.option("-p, --pack", "Copy package.json file")
 	.parse(process.argv);
 
 process.chdir("./");
@@ -37,3 +40,4 @@ process.chdir("./");
 if (program.dotfiles)dotfile();
 if (program.hooks)gitHooks();
 if (program.task)gulpfile();
+if (program.pack)pj();

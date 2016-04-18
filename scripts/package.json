@@ -1,0 +1,39 @@
+{
+  "name": "kapa",
+  "version": "0.0.4",
+  "bin": {
+    "edm-setup-config": "edm-setup-config.js"
+  },
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "maintainers": [
+    {
+      "name": "Istvan Nagy",
+      "email": "steve@edmdesigner.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EDMdesigner/project-config.git"
+  },
+  "keywords": [
+    "tool",
+    "workflow",
+    "githook",
+    "hint"
+  ],
+  "author": "Istvan Nagy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EDMdesigner/project-config/issues"
+  },
+  "homepage": "https://github.com/EDMdesigner/project-config#readme",
+  "dependencies": {
+    "commander": "2.9.0",
+    "nconf": "0.8.4",
+    "fs-extra": "0.26.5"
+  }
+}
